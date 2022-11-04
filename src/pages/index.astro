@@ -24,12 +24,16 @@ const {
 <Layout title="METRA Magazine">
   <main>
     <div
-      class="z-100 h-screen w-full left-0 top-0 fixed bg-black bg-[radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4066001400560224) 35%, rgba(0,212,255,0) 100%)]"
+      class="z-100 h-screen w-full left-0 top-0 fixed opacity-50 bg-gradient-radial from-transparent via-transparent to-black"
     >
     </div>
-    <div class="fixed text-white text-8xl font-metra left-5 top-5">METRA</div>
-    <LandingMenu />
-    <div class="fixed text-white text-lg bottom-3 right-3">
+    <div
+      class="fixed text-white text-8xl font-metra left-5 top-5 z-[1000] drop-shadow-lg"
+    >
+      METRA
+    </div>
+    <LandingMenu client:visible />
+    <div class="fixed text-white text-lg bottom-3 right-3 z-100">
       © 2022 Metra Magazine
     </div>
   </main>

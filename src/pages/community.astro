@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import LandingMenu from "../components/LandingMenu/LandingMenu";
+import Navbar from "../components/Navbar/Navbar";
+
+export interface Props {
+  links: {
+    title: string;
+    href: string;
+    color: string;
+    image: string;
+    active: boolean;
+  };
+}
+
+const {
+  links = {
+    Home: "/",
+    About: "/about",
+    Contact: "/contact",
+  },
+} = Astro.props;
+---
+
+<Layout title="METRA Magazine">
+  <Navbar />
+</Layout>

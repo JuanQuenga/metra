@@ -7,21 +7,24 @@ type MenuItemProps = {
   image?: string;
 };
 
-const MenuItem = ({ title, color, opened = false }: MenuItemProps) => {
+const MenuItem = ({ title, color, image, opened = false }: MenuItemProps) => {
   return (
     <div
-      className={cn("flex-shrink hover:flex-grow transition-all " + color, {
-        "flex-grow": opened,
-        "flex-shrink": !opened,
-      })}
+      className={
+        "relative group basis-1/6 hover:basis-2/3 transition-all overflow-hidden " +
+        color
+      }
     >
-      <div className="h-full opacity-25 bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1529912626516-e58b23f44f1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80')]">
-        {title}
+      <img
+        src={image}
+        className="absolute object-cover opacity-25 group-hover:opacity-1 group-hover:scale-150 h-screen transition-all"
+      />
+
+      <div className="flex flex-col h-full w-full align-center group-hover:align-start justify-end">
+        <div className="text-center text-6xl text-white font-metra -rotate-90 group-hover:rotate-0 transition-all whitespace-nowrap -translate-y-[3em] group-hover:-translate-y-[2em] drop-shadow-md">
+          {title}
+        </div>
       </div>
-      {/* <img
-	src="https://images.unsplash.com/photo-1529912626516-e58b23f44f1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80"
-	className="object-cover opacity-25 hover:opacity-1 hover:object-scale-down w-full h-full transition-all"
-/> */}
     </div>
   );
 };
