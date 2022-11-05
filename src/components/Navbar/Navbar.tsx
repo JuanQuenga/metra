@@ -26,7 +26,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <header className="group h-20 bg-stone-800 ">
+    <header className="group h-20 bg-stone-800 mb-4">
       <div className="flex items-center">
         <div className="flex-grow pl-4 ">
           <span className="font-metra text-5xl text-transparent drop-shadow-lg bg-rainbow bg-clip-text animate-rainbow">

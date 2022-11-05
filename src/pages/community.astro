@@ -1,27 +1,59 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import LandingMenu from "../components/LandingMenu/LandingMenu";
 import Navbar from "../components/Navbar/Navbar";
 
-export interface Props {
-  links: {
-    title: string;
-    href: string;
-    color: string;
-    image: string;
-    active: boolean;
-  };
-}
-
-const {
-  links = {
-    Home: "/",
-    About: "/about",
-    Contact: "/contact",
+const cards = [
+  {
+    title: "Body Zone",
+    body: "Sweetest Day on October 17th, where you can get that special arrangement for your sweetie or any loved one. They are the original producers of the “Rainbow Roses” also many other items, placements and memorabilia to make a special occasion even more special.",
+    phone: "123-456-7890",
+    link: "https://www.google.com",
+    date: "2021-01-01",
   },
-} = Astro.props;
+  {
+    title: "Card 2",
+    body: "This is the second card",
+    phone: "123-456-7890",
+    link: "https://www.google.com",
+    date: "2021-01-01",
+  },
+  {
+    title: "Card 3",
+    body: "This is the third card",
+    phone: "123-456-7890",
+    link: "https://www.google.com",
+    date: "2021-01-01",
+  },
+];
 ---
 
 <Layout title="METRA Magazine">
   <Navbar />
+  <main class="container mx-auto">
+    <p>
+      So, Autumn is really here, time for changing leaves, bundling up our
+      campers and trailers for the winter, warmer jackets, long pants, flannel
+      shirts, campfire at night, cookouts, Apple cider, hot donut, and warn
+      drinks! And a good times to gather with “our” families and friends to
+      enjoy the cool nights of the autumn season. “Sweetest Day” is on October
+      17th and day to show your special someone how much you care for them also
+      good day to celebrate your union. Then “Halloween” on October 31st, is the
+      night, where costume contests, are the theme of the evening as in the
+      past, “hell” we’re all wearing mask anyway let’s see just how talented you
+      can be, with your ideas and improvisations! Also, Election Day, November
+      3rd, with either our “Pity Party’s” or “Celebration Party’s” I don’t
+      really give a crap, I’m going to party!! Also on Wednesday, November 11th
+      it’s our “Veterans Day” a day to say “Thank You” to the men and women who
+      fight for our freedoms to party and celebrate! And then comes the most
+      famous day of the year, the “Night before Thanksgiving” which is the
+      biggest drinking night of the year! Then it’s Thanksgiving Day, time to
+      for your family, extended families and friends! And give thanks for still
+      being alive and healthy in this time of Covid-19! Now let’s see who is
+      doing what and who in Metraland!
+    </p>
+    <hr />
+    <section>
+      <div class="flex"></div>
+    </section>
+  </main>
 </Layout>
