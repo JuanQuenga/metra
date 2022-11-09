@@ -9,7 +9,7 @@ const Navbar = () => {
       href: "/community",
     },
     {
-      title: "Latest Issue",
+      title: "Issues",
       href: "/community",
     },
     {
