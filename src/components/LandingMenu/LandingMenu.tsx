@@ -18,12 +18,12 @@ const LandingMenu = () => {
 
   const links: Links[] = [
     {
-      title: "Events",
+      title: "About ",
       color: "bg-red-600",
       image: "/landing/a.jpeg",
     },
     {
-      title: "Resources",
+      title: "Events",
       color: "bg-orange-600",
       image: "/landing/b.jpeg",
     },
@@ -33,7 +33,7 @@ const LandingMenu = () => {
       image: "/landing/c.jpeg",
     },
     {
-      title: "Publishing",
+      title: "Releases",
       color: "bg-green-600",
       image: "/landing/d.jpeg",
     },
