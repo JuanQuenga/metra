@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar/Navbar";
+import { useSanityClient } from "astro-sanity";
+import ResourceCard from "../components/ResourceCard";
+
+export async function getResources() {
+  const query = `*[_type == "resource"]`;
+  const firstResource = await useSanityClient().fetch(query);
+  return firstResource;
+}
+
+const data = await getResources();
+---
+
+<Layout title="METRA Magazine">
+  <Navbar />
+  <main class="container mx-auto">
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 ld:grid-cols-4 gap-2"
+    >
+      {
+        data.map((resource) => (
+          <ResourceCard
+            name={resource.name}
+            website={resource.website}
+            description={resource.description}
+            tags={resource.tags}
+          />
+        ))
+      }
+    </div>
+  </main>
+</Layout>

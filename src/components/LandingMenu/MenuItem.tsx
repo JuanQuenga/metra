@@ -9,23 +9,24 @@ type MenuItemProps = {
 
 const MenuItem = ({ title, color, image, opened = false }: MenuItemProps) => {
   return (
-    <div
+    <a
       className={
-        "relative group basis-1/6 hover:basis-2/3 transition-all overflow-hidden " +
+        "relative group basis-1/6 transition-all hover:scale-[105%] overflow-hidden shadow-2xl hover:z-50 shadow-black " +
         color
       }
+      tabIndex={0}
     >
       <img
         src={image}
-        className="absolute object-cover opacity-25 group-hover:opacity-1 group-hover:scale-150 h-screen transition-all"
+        className="absolute object-cover opacity-25 group-hover:scale-[110%] h-screen transition-all"
       />
 
-      <div className="flex flex-col h-full w-full align-center group-hover:align-start justify-end">
-        <div className="text-center text-6xl text-white font-metra -rotate-90 group-hover:rotate-0 transition-all whitespace-nowrap -translate-y-[3em] group-hover:-translate-y-[2em] drop-shadow-md">
+      <div className="flex flex-col h-full w-full align-center justify-end">
+        <div className="text-center text-6xl text-white font-metra -rotate-90 whitespace-nowrap -translate-y-[3em] drop-shadow-md">
           {title}
         </div>
       </div>
-    </div>
+    </a>
   );
 };
 

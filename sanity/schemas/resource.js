@@ -19,8 +19,8 @@ export default {
       title: "Desscription",
     },
     {
-      title: "Categories", // new
-      name: "categories",
+      title: "Tags",
+      name: "tags",
       type: "array",
       of: [{ type: "string" }],
       options: {

@@ -18,45 +18,39 @@ const LandingMenu = () => {
 
   const links: Links[] = [
     {
-      title: "Community",
+      title: "Events",
       color: "bg-red-600",
-      image:
-        "https://images.unsplash.com/photo-1656587175141-79babfda47cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format",
+      image: "/landing/a.jpeg",
     },
     {
-      title: "Affiliates",
+      title: "Resources",
       color: "bg-orange-600",
-      image:
-        "https://images.unsplash.com/photo-1528150443491-c8042c6bc419?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format",
+      image: "/landing/b.jpeg",
     },
     {
-      title: "Current Issue",
+      title: "Releases",
       color: "bg-yellow-600",
-      image:
-        "https://images.unsplash.com/photo-1495638488670-437e54b3bab4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format",
+      image: "/landing/c.jpeg",
     },
     {
       title: "Publishing",
       color: "bg-green-600",
-      image:
-        "https://images.unsplash.com/photo-1562038969-e85c13ecb2ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format",
+      image: "/landing/d.jpeg",
     },
     {
       title: "Advertising",
       color: "bg-blue-600",
-      image:
-        "https://images.unsplash.com/photo-1592598187272-d1ee6d661ce1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format",
+      image: "/landing/e.jpeg",
     },
     {
       title: "Contact",
       color: "bg-violet-600",
-      image:
-        "https://images.unsplash.com/photo-1637498975777-71f10ab4fc84?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format",
+      image: "/landing/f.jpeg",
     },
   ];
 
   return (
-    <div className="relative flex flex-row min-h-screen w-full bg-slate-600 cursor-pointer z-0">
+    <div className="relative flex flex-row h-screen w-full bg-slate-600 cursor-pointer z-0 overflow-hidden">
       {links.map((link) => (
         <MenuItem
           key={link.title}
