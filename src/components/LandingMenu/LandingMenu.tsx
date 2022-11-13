@@ -18,7 +18,7 @@ const LandingMenu = () => {
 
   const links: Links[] = [
     {
-      title: "About ",
+      title: "About",
       color: "bg-red-600",
       image: "/landing/a.jpeg",
     },
