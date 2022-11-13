@@ -5,7 +5,7 @@ interface Links {
   title: string;
   color: string;
   image: string;
-  opened?: boolean;
+  href: string;
 }
 
 const LandingMenu = () => {
@@ -21,31 +21,37 @@ const LandingMenu = () => {
       title: "About",
       color: "bg-red-600",
       image: "/landing/a.jpeg",
+      href: "/about",
     },
     {
       title: "Events",
       color: "bg-orange-600",
       image: "/landing/b.jpeg",
+      href: "/events",
     },
     {
-      title: "Releases",
+      title: "Resources",
       color: "bg-yellow-600",
       image: "/landing/c.jpeg",
+      href: "/resources",
     },
     {
       title: "Releases",
       color: "bg-green-600",
       image: "/landing/d.jpeg",
+      href: "/releases",
     },
     {
       title: "Advertising",
       color: "bg-blue-600",
       image: "/landing/e.jpeg",
+      href: "/advertising",
     },
     {
       title: "Contact",
       color: "bg-violet-600",
       image: "/landing/f.jpeg",
+      href: "/contact",
     },
   ];
 
@@ -57,6 +63,7 @@ const LandingMenu = () => {
           title={link.title}
           color={link.color}
           image={link.image}
+          href={link.href}
         />
       ))}
     </div>

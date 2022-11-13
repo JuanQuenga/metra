@@ -3,17 +3,18 @@ import cn from "classnames";
 type MenuItemProps = {
   title: string;
   color: string;
-  opened?: boolean;
-  image?: string;
+  href: string;
+  image: string;
 };
 
-const MenuItem = ({ title, color, image, opened = false }: MenuItemProps) => {
+const MenuItem = ({ title, color, image, href }: MenuItemProps) => {
   return (
     <a
       className={
         "relative group basis-1/6 transition-all hover:scale-[105%] overflow-hidden shadow-2xl hover:z-50 shadow-black " +
         color
       }
+      href={href}
       tabIndex={0}
     >
       <img
